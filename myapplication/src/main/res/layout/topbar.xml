@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.liger.myapplication.MyTopBar
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        custom:leftBackground="#3EC5FF"
+        custom:leftText="Back"
+        custom:leftTextColor="#FFFFFF"
+        custom:rightBackground="#3EC5FF"
+        custom:rightText="More"
+        custom:rightTextColor="#FFFFFF"
+        custom:myTitle="标题"
+        custom:myTitleTextColor="#3EC5FF"
+        custom:myTitleTextSize="12sp"
+        />
+
+</LinearLayout>
