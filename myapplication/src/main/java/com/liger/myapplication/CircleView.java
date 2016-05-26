@@ -61,8 +61,11 @@ public class CircleView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        canvas.drawCircle(mCircleXY,mCircleXY,mRadius,mCirclePaint);
-        canvas.drawArc(mArcRectf,0,mSweepAngel,false,mArcPaint);
+//        canvas.drawCircle(mCircleXY,mCircleXY,mRadius,mCirclePaint);
+        /**
+         * 绘制弧线，从0度开始，扫过 mSweepAngel(如90) 的角度
+         */
+        canvas.drawArc(mArcRectf,0,mSweepAngel,true,mArcPaint);
         canvas.drawText(mShowText,0,mShowText.length(),mCircleXY,mCircleXY+(mShowTextSize/4),mTextPaint);
     }
 
@@ -90,8 +93,8 @@ public class CircleView extends View {
         mArcPaint.setAntiAlias(true);
         mArcPaint.setColor(getResources().getColor(android.R.color.holo_blue_bright));
         mArcPaint.setStrokeWidth((float) (length * 0.05));//画笔宽度
-        mArcPaint.setStyle(Paint.Style.STROKE);
-
+        mArcPaint.setStyle(Paint.Style.FILL);
+        
         mShowText = setShowText();
         mShowTextSize = setShowTextSize();
         mTextPaint = new Paint();
